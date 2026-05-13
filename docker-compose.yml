@@ -1,0 +1,7 @@
+services:
+  voting-poker:
+    image: ghcr.io/felipe-pita/voting.poker:latest
+    container_name: voting-poker
+    restart: unless-stopped
+    ports:
+      - "3000:80"
