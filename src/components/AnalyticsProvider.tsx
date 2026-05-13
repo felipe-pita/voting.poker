@@ -3,7 +3,6 @@
 import * as React from "react";
 
 import { useEffect } from "react";
-import { DataCollectionNotification } from "@/components/DataCollectionNotification";
 import {
   ConsentStatus,
   getConsent,
@@ -66,7 +65,6 @@ export default function AnalyticsProvider({
       }}
     >
       {children}
-      <DataCollectionNotification />
     </AnalyticsContext.Provider>
   );
 }

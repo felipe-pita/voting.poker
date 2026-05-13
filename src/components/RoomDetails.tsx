@@ -109,7 +109,7 @@ const RoomDetails = ({ roomId, user, users }: RoomDetailsProps) => {
 					sx={{
 						cursor: "default",
 						height: "48px",
-						width: "135px",
+						width: "200px",
 						overflow: "hidden",
 						"&:hover": {
 							"&:hover [data-component='digits']": {

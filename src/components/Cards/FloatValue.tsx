@@ -134,15 +134,17 @@ const useFloatValueStyles = ({
 
 type FloatValueProps = FloatValuePositions & {
 	value: string;
+	displayValue?: string;
 	background: string;
 	isImage?: boolean;
 };
 
 export const FloatValue = (props: FloatValueProps) => {
 	const { classes, value, placement } = useFloatValueStyles(props);
+	const display = props.displayValue ?? value;
 	return (
-		<Box data-value={value} className={cx(classes.floatValue, ...placement)}>
-			<Typography variant="button">{value}</Typography>
+		<Box data-value={display} className={cx(classes.floatValue, ...placement)}>
+			<Typography variant="button">{display}</Typography>
 		</Box>
 	);
 };

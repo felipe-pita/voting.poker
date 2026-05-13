@@ -94,9 +94,23 @@ interface CardBaseProps {
 	hover: boolean;
 }
 
+const CORNER_DISPLAY: Record<string, string> = {
+	"épica": "e",
+	"?": "?",
+	null: "",
+};
+
+const CENTER_FONT_SIZE: Record<string, string> = {
+	"épica": "1rem",
+	null: "1rem",
+	"?": "1rem",
+};
+
 export const CardForeground = ({ value, hover }: CardBaseProps) => {
 	const theme = useTheme();
 	const { palette } = theme;
+
+	const cornerDisplay = CORNER_DISPLAY[value] ?? value;
 
 	const classes = useStyles({ hover });
 	return (
@@ -104,31 +118,47 @@ export const CardForeground = ({ value, hover }: CardBaseProps) => {
 			<Box className={classes.background}>
 				<FloatValue
 					value={value}
+					displayValue={cornerDisplay}
 					background={lighten(palette.primary.main, 0.1)}
 					top
 					left
 				/>
 				<FloatValue
 					value={value}
+					displayValue={cornerDisplay}
 					background={lighten(palette.primary.main, 0.1)}
 					top
 					right
 				/>
 				<Box
-					sx={{ boxShadow: hover ? 12 : 0 }}
+					sx={{
+						boxShadow: hover ? 12 : 0,
+						...(CENTER_FONT_SIZE[value] && {
+							"&::before": {
+								fontSize: `${CENTER_FONT_SIZE[value]} !important`,
+							},
+						}),
+					}}
 					data-value={value}
 					className={cx(classes.value)}
 				>
-					<Typography variant="h4">{value}</Typography>
+					<Typography
+						variant="h4"
+						sx={CENTER_FONT_SIZE[value] ? { fontSize: CENTER_FONT_SIZE[value] } : undefined}
+					>
+						{value}
+					</Typography>
 				</Box>
 				<FloatValue
 					value={value}
+					displayValue={cornerDisplay}
 					background={lighten(palette.primary.main, 0.1)}
 					bottom
 					left
 				/>
 				<FloatValue
 					value={value}
+					displayValue={cornerDisplay}
 					background={lighten(palette.primary.main, 0.1)}
 					bottom
 					right

@@ -18,7 +18,7 @@ const UrlWrapper = styled(Box)(({ theme }) => ({
 	height: theme.spacing(6),
 	display: "flex",
 	alignItems: "center",
-	overflowX: "auto",
+	overflowX: "hidden",
 	whiteSpace: "nowrap",
 }));
 

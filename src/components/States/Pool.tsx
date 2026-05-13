@@ -18,32 +18,25 @@ const Root = styled(Box)(({ theme }) => ({
 
 const Cards = styled(Box)(({ theme }) => ({
 	display: "flex",
+	flexDirection: "column",
+	gap: theme.spacing(2),
+	alignItems: "center",
+	flex: 1,
+}));
+
+const CardsRow = styled(Box)(({ theme }) => ({
+	display: "flex",
 	flexWrap: "wrap",
 	gap: theme.spacing(2),
 	justifyContent: "center",
-	maxWidth: theme.spacing(125),
-	flex: 1,
 }));
 
 interface PoolStateComponentProps {
 	state: AnyPoolState;
 }
 
-const CARD_VALUES = [
-	"0",
-	"0.5",
-	"1",
-	"2",
-	"3",
-	"5",
-	"8",
-	"13",
-	"20",
-	"40",
-	"100",
-	"?",
-	"☕️",
-];
+const NUMERIC_CARDS = ["1", "2", "3", "5", "8", "13"];
+const SPECIAL_CARDS = ["épica", "?", "null"];
 
 const PoolStateComponent: React.FC<PoolStateComponentProps> = ({ state }) => {
 	const room = useRoom();
@@ -61,14 +54,26 @@ const PoolStateComponent: React.FC<PoolStateComponentProps> = ({ state }) => {
 	return (
 		<Root>
 			<Cards>
-				{CARD_VALUES.map((value) => (
-					<Card
-						key={value}
-						value={value}
-						onClick={() => vote(value)}
-						selected={value === userVote}
-					/>
-				))}
+				<CardsRow>
+					{NUMERIC_CARDS.map((value) => (
+						<Card
+							key={value}
+							value={value}
+							onClick={() => vote(value)}
+							selected={value === userVote}
+						/>
+					))}
+				</CardsRow>
+				<CardsRow>
+					{SPECIAL_CARDS.map((value) => (
+						<Card
+							key={value}
+							value={value}
+							onClick={() => vote(value)}
+							selected={value === userVote}
+						/>
+					))}
+				</CardsRow>
 			</Cards>
 		</Root>
 	);

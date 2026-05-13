@@ -3,13 +3,19 @@ export const isDev =
     ? import.meta.env?.DEV ?? false
     : process && process.env.NODE_ENV === "development";
 
-export const siteHost = isDev
-  ? typeof location !== "undefined"
-    ? location.host
-    : "localhost:3000"
-  : "voting.poker";
+const isBrowser = typeof location !== "undefined";
 
-export const BASE_URL = isDev ? `http://${siteHost}` : `https://${siteHost}`;
+export const siteHost = isBrowser
+  ? location.host
+  : isDev
+    ? "localhost:3000"
+    : "voting.poker";
+
+export const BASE_URL = isBrowser
+  ? `${location.protocol}//${location.host}`
+  : isDev
+    ? `http://${siteHost}`
+    : `https://${siteHost}`;
 
 export const ablyKey =
   "KFbzIQ.hA8SsQ:h4P2SGxtFt3I-6sB2vbLbmeHycJIs5wDMKaWk23dWAw";

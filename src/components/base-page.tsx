@@ -30,15 +30,24 @@ const BasePage = ({ children }: BasePageProps) => {
 				<Grid
 					component="div"
 					sx={{
-						lineHeight: 6,
+						position: "fixed",
+						bottom: 0,
+						left: 0,
+						right: 0,
 						display: "flex",
 						alignItems: "center",
 						justifyContent: "center",
-						height: 64,
+						height: 32,
+						fontSize: 12,
+						lineHeight: 1,
 						overflow: "hidden",
+						backdropFilter: "blur(8px)",
+						backgroundColor: "rgba(0, 0, 0, 0.35)",
+						color: "#979797",
+						zIndex: 1000,
 					}}
 				>
-					Made with&nbsp;
+					feito com&nbsp;
 					<span
 						style={{
 							color: "red",
@@ -47,16 +56,27 @@ const BasePage = ({ children }: BasePageProps) => {
 					>
 						♥︎
 					</span>
-					&nbsp;by&nbsp;
+					&nbsp;por&nbsp;
 					<Link
 						href="https://github.com/jeffersonmourak"
 						target="_blank"
 						sx={{
-							color: "secondary.main",
+							color: "#979797",
+							textDecoration: "underline !important",
 						}}
 					>
 						jeffersonmourak
 					</Link>
+					&nbsp;e forkado com&nbsp;
+					<span
+						style={{
+							color: "red",
+							animation: "heart-beat 1s ease infinite",
+						}}
+					>
+						♥︎
+					</span>
+					&nbsp;também
 				</Grid>
 			</Grid>
 		</Layout>

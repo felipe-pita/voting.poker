@@ -116,6 +116,18 @@ interface CardBaseProps {
 	hover: boolean;
 }
 
+const CORNER_DISPLAY: Record<string, string> = {
+	"épica": "e",
+	"?": "?",
+	null: "",
+};
+
+const CENTER_FONT_SIZE: Record<string, string> = {
+	"épica": "1rem",
+	null: "1rem",
+	"?": "1rem",
+};
+
 const useHoverShadow = (background: string, isImage?: boolean) => {
 	if (isImage) {
 		return "0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12)";
@@ -134,6 +146,7 @@ export const CardBackground = ({
 	const classes = useStyles({ height, background, isImage });
 
 	const shadowColor = useHoverShadow(background, isImage);
+	const cornerDisplay = CORNER_DISPLAY[value] ?? value;
 
 	return (
 		<Box className={classes.root}>
@@ -143,6 +156,7 @@ export const CardBackground = ({
 			<Box className={classes.background}>
 				<FloatValue
 					value={value}
+					displayValue={cornerDisplay}
 					background={background}
 					isImage={isImage}
 					top
@@ -150,20 +164,34 @@ export const CardBackground = ({
 				/>
 				<FloatValue
 					value={value}
+					displayValue={cornerDisplay}
 					background={background}
 					isImage={isImage}
 					top
 					right
 				/>
 				<Box
-					sx={{ boxShadow: hover ? shadowColor : 0 }}
+					sx={{
+						boxShadow: hover ? shadowColor : 0,
+						...(CENTER_FONT_SIZE[value] && {
+							"&::before": {
+								fontSize: `${CENTER_FONT_SIZE[value]} !important`,
+							},
+						}),
+					}}
 					data-value={value}
 					className={cx(classes.value)}
 				>
-					<Typography variant="h4">{value}</Typography>
+					<Typography
+						variant="h4"
+						sx={CENTER_FONT_SIZE[value] ? { fontSize: CENTER_FONT_SIZE[value] } : undefined}
+					>
+						{value}
+					</Typography>
 				</Box>
 				<FloatValue
 					value={value}
+					displayValue={cornerDisplay}
 					background={background}
 					isImage={isImage}
 					bottom
@@ -171,6 +199,7 @@ export const CardBackground = ({
 				/>
 				<FloatValue
 					value={value}
+					displayValue={cornerDisplay}
 					background={background}
 					isImage={isImage}
 					bottom
