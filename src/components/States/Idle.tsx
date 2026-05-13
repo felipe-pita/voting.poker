@@ -84,50 +84,47 @@ const IdleStateComponent: React.FC<PoolStateComponentProps> = ({ state }) => {
 				<WaitingGraphicBlock>
 					<WaitingGraphic
 						src={brazucaCatchingUp}
-						alt="Graphic of people chatting in the living room. Brazuca, By Cezar Berje"
+						alt="Ilustração de pessoas conversando na sala. Brazuca, por Cezar Berje"
 					/>
 				</WaitingGraphicBlock>
 				<HeroText variant="h1">
-					Let's get started! <br />
+					Vamos começar! <br />
 				</HeroText>
 			</WaitingBlock>
 			<ModeratorWarningBlock>
 				<ModeratorWarningGraphicBlock>
 					<ModeratorWarningGraphicImage
 						src={brazucaSittingOnWheelchair}
-						alt="Graphic of person waving on a wheelchair. Brazuca, By Cezar Berje"
+						alt="Ilustração de pessoa acenando em cadeira de rodas. Brazuca, por Cezar Berje"
 					/>
 				</ModeratorWarningGraphicBlock>
 
 				<Box flex={1} gap={2} display={"flex"} flexDirection={"column"}>
 					{!state.moderator ? (
 						<Typography variant="body1" sx={{ fontWeight: 500 }}>
-							Howdy!
+							Olá!
 							<br />
 							<br />
-							Just a heads up, the voting's about to start when the moderator
-							gives the signal.
+							Só pra avisar: a votação começa assim que o moderador der o sinal.
 							<br />
-							But hold onto your hats – your team can join the party whenever
-							they're ready.
+							Mas relaxa – seu time pode entrar quando estiver pronto.
 							<strong style={{ fontWeight: 600, whiteSpace: "nowrap" }}>
-								No waiting required!
+								Sem precisar esperar!
 							</strong>
 						</Typography>
 					) : (
 						<Typography variant="body1" sx={{ fontWeight: 500 }}>
-							Howdy, moderator!
+							Olá, moderador!
 							<br />
 							<br />
-							Just wanted to let you know, as soon as you give the signal, the
-							voting floodgates will open!
+							Assim que você der o sinal, a votação está liberada!
 							<br />
-							Oh, and by the way,{" "}
+							A propósito,{" "}
 							<strong style={{ fontWeight: 600 }}>
-								there's no need to wait for next session.
+								não precisa esperar a próxima sessão.
 							</strong>{" "}
-							Your eager participants can jump in and start voting whenever
-							they're ready. Let the games begin!
+							Os participantes podem entrar e votar na hora que estiverem
+							prontos. Bora começar!
 						</Typography>
 					)}
 				</Box>

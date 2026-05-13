@@ -27,8 +27,7 @@ const ModeratorModal = () => {
 			<Paper>
 				<ModalContent maxWidth="sm">
 					<Typography variant="h5" align="center">
-						Well, seems like the moderator left, but you can still be the
-						moderator!
+						Parece que o moderador saiu, mas você pode assumir o lugar!
 					</Typography>
 					<Button
 						color="secondary"
@@ -43,7 +42,7 @@ const ModeratorModal = () => {
 							room.updateUser({ ...user, moderator: true });
 						}}
 					>
-						Be the moderator
+						Ser o moderador
 					</Button>
 				</ModalContent>
 			</Paper>

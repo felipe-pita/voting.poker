@@ -23,11 +23,11 @@ class ErrorBoundary extends Component<
 		if (this.state.hasError) {
 			return (
 				<div className="error-boundary">
-					<h2>Something went wrong.</h2>
-					<p>Please try refreshing the page.</p>
+					<h2>Algo deu errado.</h2>
+					<p>Tente atualizar a página.</p>
 					{this.state.error && (
 						<details>
-							<summary>Error details</summary>
+							<summary>Detalhes do erro</summary>
 							<pre>{this.state.error.message}</pre>
 						</details>
 					)}
@@ -52,7 +52,7 @@ export function Session() {
 
 	return (
 		<ErrorBoundary>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={<div>Carregando...</div>}>
 				<LazySession />
 			</Suspense>
 		</ErrorBoundary>

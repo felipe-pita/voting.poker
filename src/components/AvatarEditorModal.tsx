@@ -101,7 +101,7 @@ interface AvatarPickerProps {
 export const AvatarEditorModal = ({
 	user,
 	hideDisable = false,
-	title = "Choose your new avatar",
+	title = "Escolha seu novo avatar",
 	open,
 	setOpen,
 	onChange,
@@ -176,7 +176,7 @@ export const AvatarEditorModal = ({
 						/>
 						<UsernameBox>
 							<TextField
-								label="Name"
+								label="Nome"
 								onChange={updateField("name", true)}
 								fullWidth
 								value={data.name}
@@ -196,7 +196,7 @@ export const AvatarEditorModal = ({
 							}}
 							component="h6"
 						>
-							Or search and pick a gif below as profile avatar
+							Ou busque e escolha um gif abaixo como avatar
 						</Typography>
 						<GiphySearch
 							avatarUrl={data.avatar}
@@ -213,7 +213,7 @@ export const AvatarEditorModal = ({
 							/>
 							<FooterActions>
 								{isMobile && scrollTop > 490 && (
-									<Tooltip title="Get back to top" placement="top">
+									<Tooltip title="Voltar ao topo" placement="top">
 										<Button
 											sx={{
 												borderRadius: 1,
@@ -228,7 +228,7 @@ export const AvatarEditorModal = ({
 								)}
 								{!hideDisable && (
 									<Button onClick={() => setOpen(false)} variant="contained">
-										Cancel
+										Cancelar
 									</Button>
 								)}
 								<Button
@@ -236,7 +236,7 @@ export const AvatarEditorModal = ({
 									variant="contained"
 									color="secondary"
 								>
-									Save
+									Salvar
 								</Button>
 							</FooterActions>
 						</Footer>
@@ -252,7 +252,7 @@ export const AvatarEditorModal = ({
 						>
 							<EmojiPicker
 								previewConfig={{
-									defaultCaption: "This is your emoji now.",
+									defaultCaption: "Esse é seu emoji agora.",
 									defaultEmoji: user.emoji.codePointAt(0)?.toString(16),
 								}}
 								theme={EmojiTheme.DARK}

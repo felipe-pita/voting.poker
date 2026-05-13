@@ -67,13 +67,12 @@ export const DataCollectionNotification = () => {
 		<Root elevation={12}>
 			<Box>
 				<Typography>
-					This site uses cookies to improve your experience. you can read more
-					about it{" "}
+					Este site usa cookies para melhorar sua experiência. Saiba mais{" "}
 					<Link
 						color={"secondary"}
 						href="https://github.com/jeffersonmourak/voting.poker#DATA-COLLECTION-AND-ANALYSIS-ADVISORY"
 					>
-						Here
+						aqui
 					</Link>
 				</Typography>
 			</Box>
@@ -83,14 +82,14 @@ export const DataCollectionNotification = () => {
 					color="secondary"
 					onClick={handleEnableUserDataCollection}
 				>
-					Accept
+					Aceitar
 				</Button>
 				<Button
 					variant="contained"
 					color="secondary"
 					onClick={handleDisableUserDataCollection}
 				>
-					Deny
+					Recusar
 				</Button>
 			</Actions>
 		</Root>

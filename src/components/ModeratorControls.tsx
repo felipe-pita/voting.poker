@@ -49,38 +49,38 @@ const ModeratorControls = ({
 	return (
 		<Root data-in-session={inSession}>
 			{inSession && (
-				<Tooltip title="Stop and reveal the votes">
+				<Tooltip title="Parar e revelar os votos">
 					<Button
 						sx={{ flex: 1 }}
 						variant="contained"
 						color="secondary"
 						onClick={onSessionEnd}
 					>
-						Stop
+						Parar
 					</Button>
 				</Tooltip>
 			)}
 			{!inSession && (
-				<Tooltip title="Start a new voting session">
+				<Tooltip title="Iniciar nova sessão de votação">
 					<Button
 						sx={{ flex: 1 }}
 						variant="contained"
 						color="secondary"
 						onClick={onSessionStart}
 					>
-						Start
+						Iniciar
 					</Button>
 				</Tooltip>
 			)}
 
-			<Tooltip title="Release moderator seat">
+			<Tooltip title="Liberar cadeira de moderador">
 				<ReleaseButton
 					data-in-session={inSession}
 					variant="contained"
 					color="secondary"
 					onClick={onReleaseModerator}
 				>
-					Release
+					Liberar
 				</ReleaseButton>
 			</Tooltip>
 		</Root>

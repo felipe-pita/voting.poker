@@ -2,7 +2,6 @@ import { Box, Button, useTheme } from "@mui/material";
 import { alpha, styled } from "@mui/system";
 import AppIdentification from "./AppIdentification";
 import { useVisibleSection } from "./hooks/useVisibleSection";
-import { Links } from "./Links";
 import { toNewRoom } from "@/helpers/link";
 
 const Root = styled(Box)(({ theme }) => ({
@@ -60,7 +59,6 @@ export const NavBar = () => {
 		>
 			<AppIdentification />
 			<LinksContainer>
-				<Links />
 				<ActionButton
 					onClick={toNewRoom}
 					sx={
@@ -77,7 +75,7 @@ export const NavBar = () => {
 					variant="contained"
 					color={isDark ? "primary" : "secondary"}
 				>
-					Get a room
+					Entrar em uma sala
 				</ActionButton>
 			</LinksContainer>
 		</Root>

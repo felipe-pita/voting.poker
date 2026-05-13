@@ -50,7 +50,7 @@ export async function generatePages() {
     {
       name: "description",
       content:
-        "Voting Poker is an open-source, real-time, collaborative voting tool for remote teams.",
+        "Voting Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
     },
     {
       property: "og:title",
@@ -59,7 +59,7 @@ export async function generatePages() {
     {
       property: "og:description",
       content:
-        "Voting Poker is an open-source, real-time, collaborative voting tool for remote teams.",
+        "Voting Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
     },
     {
       property: "og:url",
@@ -88,7 +88,7 @@ export async function generatePages() {
     {
       name: "twitter:description",
       content:
-        "Voting Poker is an open-source, real-time, collaborative voting tool for remote teams.",
+        "Voting Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
     },
     {
       name: "twitter:image",

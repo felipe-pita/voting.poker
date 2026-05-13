@@ -106,7 +106,7 @@ const DraggingMessage = ({ user }: { user: User }) => {
 				</Box>
 			</Box>
 			<Typography variant="body1" component="span">
-				Drop to upload
+				Solte para enviar
 			</Typography>
 		</>
 	);
@@ -144,7 +144,7 @@ const Preview = ({
 						{!user.avatar && <EditIcon />}
 					</EditButton>
 				</AvatarCTA>
-				<Tooltip title="Pick your emoji">
+				<Tooltip title="Escolha seu emoji">
 					<EmojiButton
 						onMouseEnter={() => onHoverChange(true)}
 						onMouseLeave={() => onHoverChange(false)}
@@ -160,7 +160,7 @@ const Preview = ({
 				</Tooltip>
 			</Box>
 			<Typography variant="body1" component="span" sx={{ textAlign: "center" }}>
-				Click or drop a picture here to upload
+				Clique ou solte uma imagem aqui para enviar
 			</Typography>
 		</>
 	);

@@ -53,7 +53,7 @@ export const InviteUrl = ({ value }: InviteUrlProps) => {
 
 	return (
 		<Root>
-			<Tooltip open={copied} title="Copied to clipboard">
+			<Tooltip open={copied} title="Copiado!">
 				<UrlWrapper onClick={handleSelect}>{value}</UrlWrapper>
 			</Tooltip>
 			<IconButton onClick={handleCopy} color="secondary">

@@ -50,7 +50,7 @@ function renderFullPage(
 ) {
 	return `
       <!DOCTYPE html>
-      <html>
+      <html lang="pt-BR">
         <head>
           <!-- This is an auto-generated file. Do not edit. -->
           <meta charset="utf-8" />

@@ -83,7 +83,7 @@ const ResultStateComponent: React.FC<Result> = ({ state }) => {
 			if (!user) {
 				return {
 					id,
-					name: "Unknown",
+					name: "Desconhecido",
 					emoji: "🤷",
 					moderator: false,
 					vote,
@@ -115,9 +115,9 @@ const ResultStateComponent: React.FC<Result> = ({ state }) => {
 			<Hero data-empty={results.length === 0}>
 				<Typography variant="h1">
 					{results.length > 0 ? (
-						<strong>Well Done!</strong>
+						<strong>Boa!</strong>
 					) : (
-						<strong>Well... No votes casted</strong>
+						<strong>Hmm... Nenhum voto registrado</strong>
 					)}
 				</Typography>
 			</Hero>

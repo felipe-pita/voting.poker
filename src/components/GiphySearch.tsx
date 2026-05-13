@@ -148,12 +148,12 @@ const Overlay = ({ gif, isHovered }: GifOverlayProps) => {
 				isSelected ? (
 					<>
 						<CloseRoundedIcon />
-						<Typography variant="body1">Cancel</Typography>
+						<Typography variant="body1">Cancelar</Typography>
 					</>
 				) : (
 					<>
 						<CheckRoundedIcon />
-						<Typography variant="body1">Choose</Typography>
+						<Typography variant="body1">Escolher</Typography>
 					</>
 				)
 			) : (
@@ -213,7 +213,7 @@ const Components = ({
 	return (
 		<Root>
 			<TextField
-				label="Search"
+				label="Buscar"
 				value={searchTerm}
 				onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
 					setSearchTerm(e.target.value)

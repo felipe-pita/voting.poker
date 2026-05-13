@@ -102,7 +102,7 @@ const VoteLayout = ({
 	const size = displayYouTag ? 57 : 40;
 
 	return (
-		<Tooltip title={`${displayYouTag ? "(You) " : ""}${name}`}>
+		<Tooltip title={`${displayYouTag ? "(Você) " : ""}${name}`}>
 			<Badge
 				overlap="circular"
 				anchorOrigin={{ vertical: "top", horizontal: "left" }}

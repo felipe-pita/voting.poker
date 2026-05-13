@@ -130,7 +130,7 @@ const RoomDetails = ({ roomId, user, users }: RoomDetailsProps) => {
 						}}
 						variant="subtitle1"
 					>
-						{!inSession && !revealed ? "Waiting..." : "Session duration"}
+						{!inSession && !revealed ? "Aguardando..." : "Duração da sessão"}
 					</Typography>
 					<Timer inSession={inSession} revealed={revealed} />
 				</Section>
@@ -152,7 +152,7 @@ const RoomDetails = ({ roomId, user, users }: RoomDetailsProps) => {
 
 			{isMobileOpen && (
 				<Section flex={0} width={300}>
-					<Typography variant="subtitle1">Invite participants</Typography>
+					<Typography variant="subtitle1">Convidar participantes</Typography>
 					<InviteUrl value={`${BASE_URL}/${roomId}`} />
 				</Section>
 			)}

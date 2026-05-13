@@ -156,17 +156,17 @@ export const LandingGrahic = ({ children }: LandingGrahicProps) => {
 						src={illustration8}
 						width={px(3)}
 						height={px(1.5)}
-						alt={"White Arrow with Orange Circle Graphic"}
+						alt={"Seta branca com círculo laranja"}
 					/>
 				</GroupSmallHidden>
 				<GroupFirstLine>
-					<Text variant="h3">Plan</Text>
+					<Text variant="h3">Planeje</Text>
 					<SmallHiddenGraphic>
 						<img
 							src={illustration5}
 							width={px(1)}
 							height={px(1.5)}
-							alt={"White Arrow with underscore Graphic"}
+							alt={"Seta branca com sublinhado"}
 						/>
 					</SmallHiddenGraphic>
 				</GroupFirstLine>
@@ -175,32 +175,32 @@ export const LandingGrahic = ({ children }: LandingGrahicProps) => {
 						src={illustration6}
 						width={px(1)}
 						height={px(1)}
-						alt={"Blue Circle Graphic"}
+						alt={"Círculo azul"}
 					/>
 
 					<GroupGraphic
 						src={illustration4}
 						width={px(0.5)}
 						height={px(0.5)}
-						alt={"White Cross Graphic"}
+						alt={"Cruz branca"}
 					/>
 
 					<GroupGraphic
 						src={illustration7}
 						width={px(1)}
 						height={px(1)}
-						alt={"Green Circle Graphic"}
+						alt={"Círculo verde"}
 					/>
 				</GroupCirclesSmallHidden>
 			</FirstLine>
 			<SecondLine>
-				<Text variant="h3">together</Text>
+				<Text variant="h3">em time</Text>
 				<GroupSmallHidden>
 					<GroupGraphic
 						src={illustration1}
 						width={px(4)}
 						height={px(2)}
-						alt={"White Arrow with underscore Graphic"}
+						alt={"Seta branca com sublinhado"}
 					/>
 				</GroupSmallHidden>
 			</SecondLine>
@@ -210,13 +210,13 @@ export const LandingGrahic = ({ children }: LandingGrahicProps) => {
 						src={illustration3}
 						width={px(2)}
 						height={px(2)}
-						alt={"White Arrow with underscore Graphic"}
+						alt={"Seta branca com sublinhado"}
 					/>
 				</GroupSmallHidden>
-				<Text variant="h3">and grow</Text>
+				<Text variant="h3">e cresça</Text>
 			</ThirdLine>
 			<FourthLine sx={{ justifyContent: "flex-start" }}>
-				<Text variant="h3">Stronger</Text>
+				<Text variant="h3">mais forte</Text>
 			</FourthLine>
 			{children}
 		</Root>
