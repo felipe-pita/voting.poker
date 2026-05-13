@@ -65,7 +65,7 @@ export default function AppIdentification() {
 						: undefined
 				}
 			>
-				Voting Poker
+				Planning Poker
 			</AppTitle>
 		</Root>
 	);

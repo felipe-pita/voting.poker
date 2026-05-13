@@ -50,16 +50,16 @@ export async function generatePages() {
     {
       name: "description",
       content:
-        "Voting Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
+        "Planning Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
     },
     {
       property: "og:title",
-      content: "Voting Poker",
+      content: "Planning Poker",
     },
     {
       property: "og:description",
       content:
-        "Voting Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
+        "Planning Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
     },
     {
       property: "og:url",
@@ -67,7 +67,7 @@ export async function generatePages() {
     },
     {
       property: "og:site_name",
-      content: "Voting Poker",
+      content: "Planning Poker",
     },
     {
       property: "og:image",
@@ -79,7 +79,7 @@ export async function generatePages() {
     },
     {
       property: "og:image:alt",
-      content: "Voting Poker",
+      content: "Planning Poker",
     },
     {
       name: "twitter:card",
@@ -88,7 +88,7 @@ export async function generatePages() {
     {
       name: "twitter:description",
       content:
-        "Voting Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
+        "Planning Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
     },
     {
       name: "twitter:image",
@@ -104,7 +104,7 @@ export async function generatePages() {
     },
     {
       name: "twitter:image:alt",
-      content: "Voting Poker",
+      content: "Planning Poker",
     },
     {
       name: "link:icon",

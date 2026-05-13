@@ -43,7 +43,7 @@ function renderFullPage(
 	css: string,
 	{
 		bootstrapScripts = [],
-		title = "Voting Poker",
+		title = "Planning Poker",
 		meta = [],
 		appendHead = "",
 	}: RenderFullPageProps,

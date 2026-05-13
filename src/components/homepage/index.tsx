@@ -83,7 +83,7 @@ const Home = () => {
         <LandingGrahic>
           <CallToActionsContainer>
             <CallToActionText>
-              Voting Poker é um projeto{" "}
+              Planning Poker é um projeto{" "}
               <CallToActionLink
                 target="_blank"
                 href="https://github.com/jeffersonmourak/voting.poker"

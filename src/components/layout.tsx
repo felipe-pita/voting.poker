@@ -7,22 +7,22 @@ import "../globals.css";
 import AnalyticsProvider from "./AnalyticsProvider";
 
 export const metadata = {
-	title: "Voting Poker",
+	title: "Planning Poker",
 	description:
-		"Voting Poker is an open-source, real-time, collaborative voting tool for remote teams.",
+		"Planning Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
 	openGraph: {
-		title: "Voting Poker",
+		title: "Planning Poker",
 		type: "website",
 		url: "https://voting.poker",
-		siteName: "Voting Poker",
+		siteName: "Planning Poker",
 		description:
-			"Voting Poker is an open-source, real-time, collaborative voting tool for remote teams.",
+			"Planning Poker é uma ferramenta open-source, em tempo real, de votação colaborativa para times remotos.",
 		images: [
 			{
 				url: "https://voting.poker/OG/OpenGraphFigure.png",
 				width: 800,
 				height: 400,
-				alt: "Voting Poker",
+				alt: "Planning Poker",
 			},
 		],
 	},

@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { useRoom } from "../hooks/useRoom";
 import { AvatarEditorModal } from "@/components/AvatarEditorModal";
 import { identify } from "@/helpers/analytics";
+import { hasStoredProfile } from "@/helpers/userProfileStorage";
 
 interface IAvatarContextData {
 	open: boolean;
@@ -26,7 +27,7 @@ interface AvatarProviderProps {
 
 export const AvatarProvider = ({ children }: AvatarProviderProps) => {
 	const [{ open }, updateConfig] = useState<IAvatarContextData>({
-		open: true,
+		open: !hasStoredProfile(),
 	});
 
 	const { state, updateUser } = useRoom();

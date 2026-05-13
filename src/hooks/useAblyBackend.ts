@@ -18,12 +18,18 @@ import {
 import { useEffect, useMemo } from "react";
 import sillyname from "sillyname";
 import { v4 as uuidV4 } from "uuid";
+import {
+  loadStoredProfile,
+  saveStoredProfile,
+} from "@/helpers/userProfileStorage";
+
+const storedProfile = loadStoredProfile();
 
 const DefaultUser: User = {
   id: uuidV4(),
-  name: sillyname(),
-  avatar: "",
-  emoji: "🙈",
+  name: storedProfile?.name ?? sillyname(),
+  avatar: storedProfile?.avatar ?? "",
+  emoji: storedProfile?.emoji ?? "🙈",
   moderator: false,
   vote: null,
 };
@@ -146,6 +152,11 @@ export function useAblyBackend(
         channel.presence.update({
           ...DefaultUser,
           ...state.payload,
+        });
+        saveStoredProfile({
+          name: state.payload.name,
+          avatar: state.payload.avatar,
+          emoji: state.payload.emoji,
         });
         break;
       case VotingEvents.RemoveUser:
